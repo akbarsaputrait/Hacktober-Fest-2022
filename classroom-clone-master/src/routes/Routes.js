@@ -1,5 +1,8 @@
 import React from "react";
 import { Redirect, Route } from "react-router-dom";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   return (
